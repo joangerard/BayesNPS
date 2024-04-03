@@ -20,4 +20,6 @@ bayes.nps <- function(x, a = rep(1, 3), rho = 0.05, N = 1E3) {
   print(matrix(c(mean(NPS.pos), sd(NPS.pos), ab[1], ab[2]), 1, 4,
                dimnames = list("NPS", c("mean", "sd", "l-HPD", "u-HPD"))))
   cat("\n")
+
+  return(c(mean(NPS.pos), sd(NPS.pos), ab[1], ab[2]))
 }
